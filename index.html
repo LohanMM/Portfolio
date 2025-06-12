@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>LohanMacedo | Portfólio</title>
+</head>
+
+<!-- Menu de navegação -->
+
+<body>
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+
+    </nav>
+
+<!-- Cabeçalho -->
+
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="./Assets/Linkedin-removebg-preview.png" class="foto-perfil">
+            <h1>Lohan Macedo</h1>
+            <p class="cabecalho-subtitulo">Desenvolvedor Full Stack</p>
+        </div>
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Sou estudante de Análise e Desenvolvimento de Sistemas com uma trajetória profissional que combina tecnologia, atendimento ao cliente e liderança. Atualmente atuo como técnico de telecomunicações, onde desenvolvo habilidades práticas em suporte técnico e resolução de problemas em campo.
+
+Ao longo da minha carreira, acumulei experiências valiosas como atendente de telemarketing, instrutor de treinamento e supervisor em operações bancárias, sempre com foco em comunicação clara, eficiência operacional e orientação para resultados.
+
+Estou em transição para a área de tecnologia e busco expandir meu networking com profissionais da área de TI, telecom e desenvolvimento. Acredito que minha bagagem em gestão de pessoas, atendimento e resolução de problemas agrega valor à minha futura atuação como desenvolvedor.
+            </p>
+        </div>
+    </section>
+
+<!-- Lista de projetos -->
+
+    <section id="projetos" class="projetos">
+<h2 class="projetos-titulo">Meus Projetos</h2>
+<div class="projetos-caixa">
+    <a href="https://projeto-front-01.vercel.app/" class="link-sem-sublinhado"> 
+    <div class="projetos-card">
+            <img src="Assets/Cardapio.png" alt="Projeto 01" class="projetos-imagem">
+        <div class="caixa-texto-projetos">
+            <h3 class="info-projetos">Cardapio Online</h3>
+            <p class="paragrafo-projetos">Cardapio online moderno com animações suaves e design responsivo</p>
+        </div>
+    </div>
+    </a>
+</div>
+    </section>
+
+<!-- Contato e formulario -->
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+
+<form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+    
+    <div class="grupo-form">
+        <input placeholder="Nome" class="campo-form" id="nome">
+    </div>
+
+    <div class="grupo-form">
+    <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+    </div>
+    
+    <button type="submit" class="botao-form">Enviar Whatsapp</button>
+</form>
+
+    </section>
+
+    <script>
+        function enviarWhats(event){
+
+        
+
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+        const telefone = '5588981702853';
+
+        const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+        const msgFormatada = encodeURIComponent(texto)
+
+        const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`
+        window.open(url, '_blank')
+    }
+    </script>
+
+</body>
+</html>
