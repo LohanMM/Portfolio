@@ -132,15 +132,15 @@ h1{
 
 .projetos{
     padding: 6rem 2rem;
+    
 }
 
 .projetos-caixa{
     display: grid;
-    grid-template-columns: repeat(auto-fit, min,max(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    
 }
 
 .projetos-card{
@@ -162,8 +162,8 @@ h1{
 }
 
 .projetos-card:hover{
-box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
-transform: translate(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translate(-10px) scale(1.03);
 }
 
 .projetos-imagem{
@@ -184,7 +184,7 @@ transform: translate(-10px) scale(1.03);
 .paragrafo-projetos{
     color:#94a1b2;
     line-height: 1.25rem;
-
+    max-width: 400px;
 }
 
 .info-projetos{
@@ -285,4 +285,5 @@ transform: translate(-10px) scale(1.03);
 
 .link-sem-sublinhado{
     text-decoration: none;
+    
 }
